@@ -1,0 +1,17 @@
+.msg_email{
+    color: blue;
+    font-weight: bold;
+   
+}
+
+.msg_fechahora{
+    color: brown;
+
+}
+
+
+.msg_texto{
+    color: green;
+    font-style: italic;
+
+}

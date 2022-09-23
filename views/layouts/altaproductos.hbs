@@ -1,0 +1,186 @@
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+    <meta name="description" content="" />
+    <meta name="author" content="" />
+    <link rel="icon" href="/docs/4.0/assets/img/favicons/favicon.ico" />
+
+    <title>MarketValley</title>
+
+    <link
+      rel="canonical"
+      href="https://getbootstrap.com/docs/4.0/examples/sign-in/"
+    />
+
+    <!-- Bootstrap core CSS -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+      crossorigin="anonymous"
+    />
+
+    <!-- Custom styles for this template -->
+    <link
+      href="https://getbootstrap.com/docs/4.0/examples/sign-in/signin.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css">
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="/main.js"></script>
+  </head>
+
+  <body class="text-center">
+    <header>
+      <!-- Fixed navbar -->
+      <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
+        <a class="navbar-brand" href="#">MarketValley</a>
+      
+    </header>
+ 
+  <main >
+    <br>  <br>  <br>  <br>  <br>  <br>  <br>  <br>  <br>
+    <br>  <br>  <br>  <br>  <br>  <br>  <br>  <br>  <br>
+    <br>  <br>  <br>  <br>  <br>  <br>  <br>  <br>  <br>
+    <br>  <br>  <br>  <br>  <br>  <br>  <br>  <br>  <br>
+     <br>  <br>  <br>  <br>  <br>  <br>  <br>  <br>  <br>
+    <br>  <br>  <br>  <br>  <br>  <br>  <br>  <br>  <br>
+    
+    <!-- Begin load product-->
+    <form class="form-signin" method="POST" action="/api/productos">
+    <div>
+      <img
+        class="mb-4"
+        src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSLXiNGqhbRHI6bdX_0hpPThT9FCNUc9jbWxg&usqp=CAU"
+        alt=""
+        width="72"
+        height="72"
+      />
+      <h1 class="h3 mb-3 font-weight-normal">Alta de Productos</h1>
+      <label for="inputNombre" class="sr-only">Nombre</label>
+      <input
+        type="text"
+        id="inputNombre"
+        class="form-control"
+        placeholder="Nombre"
+        required
+        autofocus
+        name="nombre"
+      />
+
+      <label for="inputPrecio" class="sr-only">Precio</label>
+      <input
+        type="text"
+        id="inputPrecio"
+        class="form-control"
+        placeholder="Precio"
+        required
+        autofocus
+        name="precio"
+      />
+
+      <label for="inputURLImagen" class="sr-only">URL Imagen</label>
+      <input
+        type="text
+        id="inputURLImagen"
+        class="form-control"
+        placeholder="URL Imagen"
+        required
+        name="urlimagen"
+      />
+
+      <br>
+      <button class="btn btn-lg btn-primary btn-block" type="submit">
+        Agregar
+      </button>
+      </div>
+    </form>
+    <br>  <br>
+
+      <!-- Begin product content -->
+      <h1 class="h3 mb-3 font-weight-normal">Listado de Productos</h1>
+      <table class="table table-dark">
+        <thead>
+          <tr>
+            <th scope="col">Nombre</th>
+            <th scope="col">Precio</th>
+            <th scope="col">URL imagen</th>
+          </tr>
+        </thead>
+        <tbody>
+          {{#each productos}}
+            <tr>
+              <th scope="col">{{this.nombre}}</th>
+              <th scope="col">{{this.precio}}</th>
+              <th scope="col">{{this.urlimagen}}</th>
+            </tr>
+
+          {{/each}}
+        </tbody>
+      </table>
+      <br>  <br>
+
+
+ <!-- Begin chat-->
+    <form class="form-signin" onsubmit="return addMessage(this)">
+    <div>
+      <h1 class="h3 mb-3 font-weight-normal">Centro de Mensajes</h1>
+      <label for="username" class="sr-only"></label>
+      <input
+        type="text"
+        id="username"
+        class="form-control"
+        placeholder="Ingrese Mail"
+        required
+        autofocus
+        name="username"
+      />
+
+      <label for="texto" class="sr-only"></label>
+      <input
+        type="text"
+        id="texto"
+        class="form-control"
+        placeholder="Ingrese mensaje"
+        autofocus
+        name="texto"
+      />
+
+      <br>
+      <button class="btn btn-lg btn-primary btn-block" type="submit">
+        Enviar
+      </button>
+      <br> 
+      
+      </div>
+    </form>
+    <br><br>
+    <div id="Mensajes"></div>
+    <br><br>
+
+
+    <footer class="footer">
+      <div class="container">
+        <span class="text-muted">Developed by K</span>
+      </div>
+    </footer>
+
+    </main>
+ 
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+      crossorigin="anonymous"
+
+       <script src="/socket.io/socket.io.js"></script>
+        <script src="/main.js"></script>
+         
+    ></script>
+     <link rel="stylesheet" href="/views/layouts/styles.css">
+  </body>
+</html>

@@ -1,0 +1,62 @@
+[
+    {
+        "nombre": "Reglas",
+        "precio": "123.75",
+        "urlimagen": "https://cdn3.iconfinder.com/data/icons/education-209/64/ruler-triangle-stationary-school-256.png",
+        "id": 1
+    },
+    {
+        "nombre": "Calculadora",
+        "precio": "234.56",
+        "urlimagen": "https://cdn3.iconfinder.com/data/icons/education-209/64/calculator-math-tool-school-256.png",
+        "id": 2
+    },
+    {
+        "nombre": "Globo Terraqueo",
+        "precio": "345.37",
+        "urlimagen": "https://cdn3.iconfinder.com/data/icons/education-209/64/globe-earth-geograhy-planet-school-256.png",
+        "id": 3
+    },
+    {
+        "nombre": "Cartuchera",
+        "precio": "344.50",
+        "urlimagen": "https://cdn3.iconfinder.com/data/icons/education-209/64/globe-earth-geograhy-planet-school-256.png",
+        "id": 4
+    },
+    {
+        "nombre": "Compas",
+        "precio": "234.80",
+        "urlimagen": "https://cdn3.iconfinder.com/data/icons/education-209/64/globe-earth-geograhy-planet-school-256.png",
+        "id": 5
+    },
+    {
+        "nombre": "Lapicera Parker",
+        "precio": "1234.00",
+        "urlimagen": "https://cdn3.iconfinder.com/data/icons/education-209/64/globe-earth-geograhy-planet-school-256.png",
+        "id": 6
+    },
+    {
+        "nombre": "Afiche",
+        "precio": "56.00",
+        "urlimagen": "https://cdn3.iconfinder.com/data/icons/education-209/64/globe-earth-geograhy-planet-school-256.png",
+        "id": 7
+    },
+    {
+        "nombre": "Boligoma",
+        "precio": "45.00",
+        "urlimagen": "https://cdn3.iconfinder.com/data/icons/education-209/64/globe-earth-geograhy-planet-school-256.png",
+        "id": 8
+    },
+    {
+        "nombre": "Cartulina",
+        "precio": "56.00",
+        "urlimagen": "https://cdn3.iconfinder.com/data/icons/education-209/64/globe-earth-geograhy-planet-school-256.png",
+        "id": 9
+    },
+    {
+        "nombre": "Papel glace",
+        "precio": "67.00",
+        "urlimagen": "https://cdn3.iconfinder.com/data/icons/education-209/64/globe-earth-geograhy-planet-school-256.png",
+        "id": 10
+    }
+]
