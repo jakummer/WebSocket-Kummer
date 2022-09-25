@@ -9,11 +9,10 @@ socket.on("listaMensajes", (data) => {
 
 function render(data) {
     const html = data.map((elem, index) => {
-    return(`<link rel="stylesheet" href="../views/layouts/styles.css">
-    <div>
-    <strong class="msg_email"> ${elem.username}</strong> - 
-    <strong class="msg_fechahora">${elem.fechahora}</strong> - 
-    <em class="msg_texto"> ${elem.texto}</em> </div>` )
+    return(`<div>
+    <strong  style = "color: red;">${elem.username}</strong> - 
+    <strong  style = "color: brown;">${elem.fechahora}</strong> - 
+    <em style = "color: green;"> ${elem.texto}</em> </div>` )
     }).join(" ");
     document .getElementById ('Mensajes' ).innerHTML = html;
 }
@@ -22,12 +21,28 @@ function render(data) {
 function addMessage(e) {
     const mensaje = {
     username: document.getElementById('username').value,
-    fechahora: Date(),
+    fechahora: formatDate(new Date()),
     texto: document.getElementById('texto').value
     };
     socket.emit('new-message', mensaje);
     return false;
 }
+
+
+function padTo2Digits(num) {
+    return num.toString().padStart(2, '0');
+  }
+  
+function formatDate(date) {
+    return [
+      padTo2Digits(date.getDate()),
+      padTo2Digits(date.getMonth() + 1),
+      date.getFullYear(),
+    ].join('/');
+  }
+  
+ 
+  
 
 
 socket.on('messages' , function (data) { render(data); });
